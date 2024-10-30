@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">AicomsApp</string>
+    <string name="emailwarning">Email Invalid\n</string>
+    <string name="passwordwarning">Masukkan Minimal 8 Karakter\n</string>
+    <string name="welcome">AICOMS Finance Lab adalah aplikasi keuangan cerdas yang dirancang untuk membantu pengguna mengelola keuangan laboratorium dengan efisien\n</string>
+    <string name="register">Hai, Register dulu ya</string>
+    <string name="login">Hai, Silahkan Login</string>
+    <string name="resetpass">Masukkan Password Baru</string>
+    <string name="forgotpass">Lupa Password?</string>
+
+    <string-array name="role">
+        <item>Mahasiswa</item>
+        <item>Dosen</item>
+    </string-array>
+
+    <string-array name="filter_types">
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>Type 3</item>
+    </string-array>
+
+    <string-array name="SumberTujuan">
+        <item>Telkom</item>
+        <item>Mahasiswa</item>
+    </string-array>
+
+    <string-array name="Filter">
+        <item>Nama</item>
+        <item>Tanggal</item>
+        <item>Uang</item>
+        <item>Status</item>
+    </string-array>
+
+    <string name="edit">Edit</string>
+    <string name="uploaded_photo">Foto yang diunggah</string>
+</resources>

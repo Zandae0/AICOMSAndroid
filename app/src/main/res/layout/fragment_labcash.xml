@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Profile Picture, click to change -->
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab Cash"
+        android:textSize="20sp"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- User Name -->
+
+    <!-- Saldo Container (Visible only for Admin) -->
+    <LinearLayout
+        android:id="@+id/saldo_container_lab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/saldo_container_curve"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintBottom_toTopOf="@+id/search_filter_container_lab"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_saldo_label_lab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Saldo"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_saldo_amount_lab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="8dp"
+            android:text="Rp.0"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/search_filter_container_lab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saldo_container_lab"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- Search Bar -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:queryHint="Search by name"
+                style="@style/SearchViewText"
+                android:background="@drawable/searchview_background"
+                android:iconifiedByDefault="false"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Filter Spinner -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/border">
+
+            <Spinner
+                android:id="@+id/filter_spinner"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Date Range (Below Search Bar) -->
+    <LinearLayout
+        android:id="@+id/date_picker_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/search_filter_container_lab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- From Date (with down arrow) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_from_date"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Jun 31, 2024"
+                android:textSize="16sp"
+                android:textColor="#000"/>
+
+            <ImageView
+                android:id="@+id/from_date_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="7dp"
+                android:layout_marginStart="8dp"
+                android:src="@android:drawable/arrow_down_float"
+                app:tint="#4F4F4F" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- To Date (with down arrow) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_to_date"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Jul 31, 2024"
+                android:textSize="16sp"
+                android:textColor="#000"/>
+
+            <ImageView
+                android:id="@+id/to_date_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="7dp"
+                android:layout_marginStart="8dp"
+                android:src="@android:drawable/arrow_down_float"
+                app:tint="#4F4F4F"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+
+    <!-- Bottom Navigation Bar -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Lab_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_picker_container" />
+
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

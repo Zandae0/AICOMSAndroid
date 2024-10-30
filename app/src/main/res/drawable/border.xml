@@ -1,0 +1,8 @@
+<!-- res/drawable/border_drawable.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/white"/>
+    <stroke
+        android:width="0.5dp"
+        android:color="#232121"/> <!-- Change this color to your preferred border color -->
+    <corners android:radius="5dp"/>
+</shape>

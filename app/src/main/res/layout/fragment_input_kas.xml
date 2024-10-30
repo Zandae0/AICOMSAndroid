@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input Kas"
+        android:textSize="20sp"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/black"
+        android:text="Nama"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <customview.EditTextNama
+        android:id="@+id/editTextNama"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="Nama"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewTanggalinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Tanggal Input"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/editTextNama"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <customview.EditTextTanggal
+        android:id="@+id/editTextTanggal"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:hint="Tanggal Input"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTanggalinput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewJumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Jumlah Uang"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/editTextTanggal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextJumlah"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:inputType="number"
+        android:importantForAccessibility="yes"
+        android:hint="Jumlah Uang"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/textViewJumlah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewSumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Sumber/Tujuan"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/editTextJumlah"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerTujuan"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:entries="@array/SumberTujuan" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBuktitranksaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutTipeTransaksi"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTujuan"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textViewBukti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Bukti Transaksi"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPIC"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" />
+
+        <TextView
+            android:id="@+id/textTipeTransaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Tipe Transaksi"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPIC"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="100dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTipeTransaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutBuktitranksaksi">
+
+        <!-- ImageView for Upload Icon -->
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="76dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/upload" />
+
+        <!-- LinearLayout for RadioButtons with vertical orientation -->
+        <LinearLayout
+            android:id="@+id/radiotipetransaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="125dp">
+
+            <!-- RadioButton Masuk -->
+            <RadioGroup
+                android:id="@+id/radioGroupTransaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/Masuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Masuk"
+                    android:theme="@style/RadioButtonStyle"/>
+
+                <RadioButton
+                    android:id="@+id/Keluar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Keluar"
+                    android:theme="@style/RadioButtonStyle"/>
+
+
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/merahmuda"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTipeTransaksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="88dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="181dp"
+        android:layout_height="164dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/register_welcome"
+        app:srcCompat="@drawable/signup" />
+
+    <customview.EditTextNama
+        android:id="@+id/editTextNama"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="372dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:paddingEnd="70dp"
+        android:hint="Nama"
+        android:ellipsize="end"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <customview.EditTextEmail
+        android:id="@+id/editTextEmail"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="316dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="Email"
+        android:paddingEnd="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_email"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="324dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/email" />
+
+    <customview.EditTextUsername
+        android:id="@+id/editTextUsename"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="260dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="Usename"
+        android:paddingEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_user"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="268dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/username" />
+
+    <ImageView
+        android:id="@+id/ic_nama"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="384dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nama" />
+
+    <TextView
+        android:id="@+id/text_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"
+        android:text="REGISTER"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/register_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/register"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <customview.EditTextPassword
+        android:id="@+id/editTextPassword"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="204dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:paddingEnd="16dp"
+        android:hint="Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_password"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="212dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/passwrd" />
+
+
+    <Spinner
+        android:id="@+id/list_role"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="148dp"
+        android:background="@drawable/rectedittext"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="@color/merahtua"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Register"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/login_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/login"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="181dp"
+        android:layout_height="164dp"
+        android:src="@drawable/signin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <TextView
+        android:id="@+id/text_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="LOGIN"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <customview.EditTextUsername
+        android:id="@+id/editTextUsername"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="340dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingEnd="40dp"
+        android:hint="Username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <customview.EditTextPassword
+        android:id="@+id/editTextPassword"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="268dp"
+        android:background="@drawable/rectedittext"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:hint="Password"
+        android:paddingEnd="22dp"
+        android:textColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_password"
+        android:layout_width="24dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="276dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/passwrd" />
+
+    <ImageView
+        android:id="@+id/ic_user"
+        android:layout_width="24dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="348dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/username" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="252dp"
+        android:text="Forgot Password"
+        android:textColor="@color/biru"
+        android:textSize="13sp"
+        android:layout_marginStart="175dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="180dp"
+        android:backgroundTint="@color/merahtua"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

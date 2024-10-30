@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <!-- User ID -->
+    <TextView
+        android:id="@+id/textViewUserId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:text="User ID: Nama"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="4dp"/>
+
+
+    <!-- Input Date -->
+    <TextView
+        android:id="@+id/textViewInputDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Tanggal Input: 31 Juni 2024"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAmount"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Amount -->
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Jumlah Uang: Rp 7.000.000"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserId"
+        android:layout_marginTop="4dp"/>
+
+
+    <ImageView
+        android:id="@+id/imageViewPic"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="User Picture"
+        android:src="@drawable/upload"
+        app:layout_constraintBottom_toTopOf="@+id/statusContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageView
+        android:id="@+id/imageViewphotosudah"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="56dp"
+        android:contentDescription="User Picture"
+        android:src="@drawable/photo_sudah"
+        app:layout_constraintBottom_toTopOf="@+id/statusContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/statusContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPic"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- "Masuk" background with text overlay -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp">
+
+            <ImageView
+                android:id="@+id/masukBackground"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rounded_masuk_background" />
+
+            <TextView
+                android:id="@+id/textViewMasuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="Masuk"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppinsbold" />
+        </FrameLayout>
+
+        <!-- "Keluar" background with text overlay -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp">
+
+            <ImageView
+                android:id="@+id/keluarBackground"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rounded_keluar_background" />
+
+            <TextView
+                android:id="@+id/textViewKeluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="Keluar"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppinsbold" />
+        </FrameLayout>
+
+        <!-- "Donasi" background with text overlay -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/donasiBackground"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rounded_donasi_background" />
+
+            <TextView
+                android:id="@+id/textViewDonasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="Donasi"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppinsbold" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    app:menu="@menu/bottom_navigation_menu">
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Home Button -->
+    <ImageButton
+        android:id="@+id/home_button"
+        android:layout_width="50dp"
+        android:layout_height="39dp"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home_111" />
+
+    <!-- User Control Button (Hidden for non-admin users) -->
+    <ImageButton
+        android:id="@+id/user_control"
+        android:layout_width="61dp"
+        android:layout_height="41dp"
+        android:src="@drawable/user_control"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="8dp"
+        android:scaleType="fitCenter" /> <!-- Hidden for non-admin users -->
+
+    <!-- Floating Action Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_circle_24"
+            android:backgroundTint="#FF0000"
+            android:layout_margin="16dp"
+            app:tint="@android:color/white" /> <!-- Fixed the tint attribute -->
+
+    <!-- Kas AICOMS Button (Hidden for non-admin users) -->
+    <ImageButton
+        android:id="@+id/kas_aicoms_button"
+        android:layout_width="56dp"
+        android:layout_height="41dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/kas_aicoms"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter" /> <!-- Hidden for non-admin users -->
+
+    <!-- Note Button -->
+    <ImageButton
+        android:id="@+id/note_button"
+        android:layout_width="50dp"
+        android:layout_height="39dp"
+        android:src="@drawable/note"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:layout_margin="8dp" />
+
+</LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

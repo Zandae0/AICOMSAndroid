@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+
+    <item
+        android:id="@+id/UserControl"
+        android:title="User Control"
+        android:icon="@drawable/gear"
+        />
+
+    <item
+        android:title=""/>
+
+    <item
+        android:id="@+id/KasAicoms"
+        android:title="Kas Aicoms"
+        android:icon="@drawable/givemoney" />
+    <item
+        android:id="@+id/Note"
+        android:title="Note"
+        android:icon="@drawable/notes" />
+
+</menu>

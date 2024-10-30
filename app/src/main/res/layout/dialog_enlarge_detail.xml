@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"> <!-- Semi-transparent dark background -->
+
+    <!-- Close button in the top right corner -->
+    <ImageView
+        android:id="@+id/btnCloseDialog"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:padding="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/lc_close" /> <!-- Replace with your close icon -->
+
+    <!-- Enlarged ImageView in the center of the screen -->
+    <ImageView
+        android:id="@+id/enlargedImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:backgroundTint="@color/white"
+        android:padding="16dp" /> <!-- Padding for clean display -->
+
+</RelativeLayout>
